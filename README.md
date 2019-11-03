@@ -1,7 +1,7 @@
 # REST-webbtjänst
 Detta repo innehåller filer för att skapa ett API som representerar information i ett CV. Att hämta information från detta API är möjligt för alla. Men POST, PUT och DELETE omsluts av en kontroll av cookie, vilket endast gör det möjligt att hantera detta från administrations-gränssnittet.
 
-## Skapa databas
+## Skapa databastabeller
 CREATE TABLE IF NOT EXISTS User (
 	Uid int(11) NOT NULL AUTO_INCREMENT,
 	Uemail varchar(152) NOT NULL,
