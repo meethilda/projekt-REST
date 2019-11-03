@@ -1,6 +1,18 @@
 # REST-webbtjänst
 Detta repo innehåller filer för att skapa ett API som representerar information i ett CV. Att hämta information från detta API är möjligt för alla. Men POST, PUT och DELETE omsluts av en kontroll av cookie, vilket endast gör det möjligt att hantera detta från administrations-gränssnittet.
 
+API:et har stöd för CRUD:
+* GET: /api
+* GET kategori: /api/[kategori/tabellnamn]
+* GET specifik ID: /api/[kategori/tabellnamn]?id=
+* POST (exempel Portfolio): /api/portfolio
+{"Ptitle": "", "Purl": "", "Pdesc": "", "Pcreated": "0000-00-00", "UserID": "[Kopplas till User via UserID]"}
+* PUT (exempel Portfolio): /api/portfolio?id=
+{"Ptitle": "", "Purl": "", "Pdesc": "", "Pcreated": "0000-00-00"}
+* DELETE: /api/[kategori/tabellnamn]?id=
+
+Demo: http://studenter.miun.se/~maed1801/dt173g/projekt-REST/cv.php/api/
+
 ## Skapa databastabeller
 CREATE TABLE IF NOT EXISTS User (
 	Uid int(11) NOT NULL AUTO_INCREMENT,
