@@ -1,3 +1,5 @@
+*Mathilda Edström, Webbutveckling HT18* / **Webbutveckling III**
+
 # REST-webbtjänst
 Detta repo innehåller filer för att skapa ett API som representerar information i ett CV. Att hämta information från detta API är möjligt för alla. Men POST, PUT och DELETE omsluts av en kontroll av cookie, vilket endast gör det möjligt att hantera detta från administrations-gränssnittet.
 
@@ -61,3 +63,5 @@ CREATE TABLE IF NOT EXISTS Portfolio (
 ALTER TABLE `Studies` ADD CONSTRAINT `study_fk` FOREIGN KEY (`UserID`) REFERENCES `User`(`Uid`) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE `Work` ADD CONSTRAINT `work_fk` FOREIGN KEY (`UserID`) REFERENCES `User`(`Uid`) ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE `Portfolio` ADD CONSTRAINT `portfolio_fk` FOREIGN KEY (`UserID`) REFERENCES `User`(`Uid`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+**OBS! Glöm inte att fylla i information för databaskoppling**
